@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".gitignore" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="PetShelterWorld.Application/PetShelterWorld.Application.csproj" />
+    <Project Path="PetShelterWorld.Domain/PetShelterWorld.Domain.csproj" />
+    <Project Path="PetShelterWorld.Infrastructure/PetShelterWorld.Infrastructure.csproj" />
+    <Project Path="PetShelterWorld.Persistence/PetShelterWorld.Persistence.csproj" />
+    <Project Path="PetShelterWorld.Presentation/PetShelterWorld.Presentation.csproj" />
+  </Folder>
+</Solution>
