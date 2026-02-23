@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Moq.AutoMock" Version="3.6.1" />
+    <PackageReference Include="Moq.EntityFrameworkCore" Version="8.0.0.1" />
+  </ItemGroup>
+
 </Project>

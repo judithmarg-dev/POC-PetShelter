@@ -9,4 +9,5 @@
     <Project Path="PetShelterWorld.Persistence/PetShelterWorld.Persistence.csproj" />
     <Project Path="PetShelterWorld.Presentation/PetShelterWorld.Presentation.csproj" />
   </Folder>
+  <Project Path="PetShelterWorld.Tests/PetShelterWorld.Tests.csproj" Id="6f8d5afa-8a2a-446b-be46-280acd60a239" />
 </Solution>

@@ -7,6 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Moq.AutoMock" Version="3.6.1" />
+    <PackageReference Include="Moq.EntityFrameworkCore" Version="8.0.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\PetShelterWorld.Application\PetShelterWorld.Application.csproj" />
   </ItemGroup>
 
