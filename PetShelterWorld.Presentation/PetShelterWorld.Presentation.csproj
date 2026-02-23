@@ -14,6 +14,7 @@
     <ProjectReference Include="..\PetShelterWorld.Application\PetShelterWorld.Application.csproj" />
     <ProjectReference Include="..\PetShelterWorld.Domain\PetShelterWorld.Domain.csproj" />
     <ProjectReference Include="..\PetShelterWorld.Infrastructure\PetShelterWorld.Infrastructure.csproj" />
+    <ProjectReference Include="..\PetShelterWorld.Persistence\PetShelterWorld.Persistence.csproj" />
   </ItemGroup>
 
 </Project>

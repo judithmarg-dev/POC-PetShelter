@@ -10,9 +10,8 @@ namespace PetShelterWorld.Domain
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public string type { get; set; }
-        public double age { get; set; }
-        public string description { get; set; }
-        public bool wasRescued { get; set; }
+        public string Type { get; set; }
+        public double Age { get; set; }
+
     }
 }
