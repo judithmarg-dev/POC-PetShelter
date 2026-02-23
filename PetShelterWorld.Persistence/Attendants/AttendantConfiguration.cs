@@ -1,11 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using PetShelterWorld.Domain;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PetShelterWorld.Persistence.Attendants
 {
@@ -13,6 +8,7 @@ namespace PetShelterWorld.Persistence.Attendants
     {
         public void Configure(EntityTypeBuilder<Attendant> builder)
         {
+            builder.ToTable("Attendant");
             builder.HasKey(p => p.Id);
 
             builder.Property(p => p.Name)

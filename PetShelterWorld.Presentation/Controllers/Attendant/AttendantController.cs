@@ -6,11 +6,11 @@ namespace PetShelterWorld.Presentation.Controllers.Attendant
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class PetCardController : ControllerBase
+    public class AttendantController : ControllerBase
     {
         private readonly IGetAttendantListQuery _query;
 
-        public PetCardController(IGetAttendantListQuery query)
+        public AttendantController(IGetAttendantListQuery query)
         {
             _query = query;
         }

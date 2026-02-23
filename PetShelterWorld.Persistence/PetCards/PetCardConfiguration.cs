@@ -1,11 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using PetShelterWorld.Domain;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PetCardShelterWorld.Persistence.PetCards
 {
@@ -13,6 +8,7 @@ namespace PetCardShelterWorld.Persistence.PetCards
     {
         public void Configure(EntityTypeBuilder<PetCard> builder)
         {
+            builder.ToTable("PetCard");
             builder.HasKey(c => c.Id);
 
             builder.Property(c => c.DateAdoption)

@@ -12,10 +12,10 @@ namespace PetShelterWorld.Application.Adoptants.Queries.GetAdoptants
             _database = database;
         }
 
-        public List<AttendantModel> Execute()
+        public List<AdoptantModel> Execute()
         {
             var adoptants = _database.Adoptants
-                .Select(p => new AttendantModel()
+                .Select(p => new AdoptantModel()
                 {
                     Id = p.Id,
                     Name = p.Name,

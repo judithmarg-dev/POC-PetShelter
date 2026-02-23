@@ -5,10 +5,10 @@ namespace PetShelterWorld.Application.Interfaces
 {
     public interface IDatabaseService
     {
-        DbSet<Attendant> Attendants { get; set; }
-        DbSet<Adoptant> Adoptants { get; set; }
-        DbSet<Pet> Pets { get; set; }
-        DbSet<PetCard> PetCards { get; set; }
+        DbSet<Attendant> Attendants { get; }
+        DbSet<Adoptant> Adoptants { get; }
+        DbSet<Pet> Pets { get;  }
+        DbSet<PetCard> PetCards { get; }
 
         void Save();
     }

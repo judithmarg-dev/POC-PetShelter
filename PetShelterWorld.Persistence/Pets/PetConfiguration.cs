@@ -13,6 +13,7 @@ namespace PetShelterWorld.Persistence.Pets
     {
         public void Configure(EntityTypeBuilder<Pet> builder)
         {
+            builder.ToTable("Pet");
             builder.HasKey(p => p.Id);
 
             builder.Property(p => p.Name)

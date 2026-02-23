@@ -8,6 +8,7 @@ namespace PetShelterWorld.Persistence.Adoptants
     {
         public void Configure(EntityTypeBuilder<Adoptant> builder)
         {
+            builder.ToTable("Adoptant");
             builder.HasKey(a => a.Id);
 
             builder.Property(a => a.Name)

@@ -1,8 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using PetShelterWorld.Application.PetCards.Commands.CreatePetCard;
 using PetShelterWorld.Application.PetCards.Queries.GetPetCardDetails;
-using PetShelterWorld.Application.PetCards.Queries.GetPetCards;
 using PetShelterWorld.Application.PetCards.Queries.GetPetCardsList;
 
 namespace PetShelterWorld.Presentation.Controllers.PetCard
