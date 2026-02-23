@@ -10,5 +10,7 @@ namespace PetShelterWorld.Application.Pets.Queries.GetPets
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public string Type { get; set; }
+        public double Age { get; set; }
     }
 }

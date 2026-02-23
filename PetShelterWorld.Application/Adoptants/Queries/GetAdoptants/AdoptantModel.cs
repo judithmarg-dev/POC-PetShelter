@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PetShelterWorld.Application.Adoptants.Queries.GetAdoptants
 {
-    public class AttendantModel
+    public class AdoptantModel
     {
         public int Id { get; set; }
         public string Name { get; set; }

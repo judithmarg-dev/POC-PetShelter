@@ -7,19 +7,19 @@ namespace PetShelterWorld.Application.PetCards.Commands.CreatePetCard
     {
         private readonly IDatabaseService _database;
         private readonly IAdoptionFactory _factory;
-        private readonly IShelterService _shelter;
+        private readonly IShelterService _shelterService;
 
         public CreatePetCardCommand(
             IDatabaseService database,
             IAdoptionFactory factory,
-            IShelterService shelter)
+            IShelterService shelterService)
         {
             _database = database;
             _factory = factory;
-            _shelter = shelter;
+            _shelterService = shelterService;
         }
 
-        public void Execute(CreatePetCardModel model)
+        public async Task ExecuteAsync(CreatePetCardModel model)
         {
             var date = DateTime.UtcNow;
 
@@ -39,7 +39,7 @@ namespace PetShelterWorld.Application.PetCards.Commands.CreatePetCard
 
             _database.PetCards.Add(card);
             _database.Save();
-            _shelter.NotifyAdoptOcurred(pet.Id, requirement);
+            _shelterService.NotifyAdoptOccurredAsync(pet.Id, pet.Name);
         }
     }
 }

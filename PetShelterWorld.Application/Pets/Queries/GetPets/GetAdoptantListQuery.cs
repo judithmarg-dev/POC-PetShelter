@@ -18,7 +18,9 @@ namespace PetShelterWorld.Application.Pets.Queries.GetPets
                 .Select(p => new PetModel()
                 {
                     Id = p.Id,
-                    Name = p.Name
+                    Name = p.Name,
+                    Type = p.Type,
+                    Age = p.Age
                 });
 
             return pets.ToList();
