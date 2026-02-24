@@ -1,0 +1,66 @@
+<section>
+  <h2>Pet Cards</h2>
+
+  <div *ngIf="errorMsg" class="error">{{ errorMsg }}</div>
+
+  <ul>
+    <li *ngFor="let c of (petCards$ | async) ?? []">
+      <strong>{{ c.petName }}</strong>
+      — Adoptant: {{ c.adoptantName }}
+      — Attendant: {{ c.attendantName }}
+      — Req: {{ c.requirements }}
+      — Days: {{ c.daysOnShelter }}
+      — Date: {{ c.dateAdoption | date:'yyyy-MM-dd' }}
+    </li>
+  </ul>
+</section>
+
+<hr>
+
+<section class="formBody">
+  <h3>Create Pet Card</h3>
+
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <label>
+      Adoptant
+      <select formControlName="adoptantId">
+        <option [ngValue]="null">-- select --</option>
+        <option *ngFor="let a of (adoptants$ | async) ?? []" [value]="a.id">
+          {{ a.name }}
+        </option>
+      </select>
+    </label>
+
+    <label>
+      Attendant
+      <select formControlName="attendantId">
+        <option [ngValue]="null">Select</option>
+        <option *ngFor="let a of (attendants$ | async) ?? []" [value]="a.id">
+          {{ a.name }}
+        </option>
+      </select>
+    </label>
+
+    <label>
+      Pet
+      <select formControlName="petId">
+        <option [ngValue]="null">Select</option>
+        <option *ngFor="let p of (pets$ | async) ?? []" [value]="p.id">
+          {{ p.name }} ({{ p.type }})
+        </option>
+      </select>
+    </label>
+
+    <label>
+      Requirement
+      <input formControlName="requirement" />
+    </label>
+
+    <label>
+      Days on Shelter
+      <input type="number" formControlName="daysOnShelter" />
+    </label>
+
+    <button type="submit" [disabled]="submitting">Create</button>
+  </form>
+</section>

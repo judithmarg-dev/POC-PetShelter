@@ -37,7 +37,20 @@ builder.Services.AddScoped<IAdoptionFactory, AdoptionFactory>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+
+var useCors = "_myCors";
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: useCors, policy =>
+    {
+        policy.WithOrigins("http://localhost:52664")
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+});
+
 var app = builder.Build();
+app.UseCors(useCors);
 
 using (var scope = app.Services.CreateScope())
 {
